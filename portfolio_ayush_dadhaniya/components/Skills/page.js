@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {  
   FaJs, 
   FaReact, 
@@ -6,7 +6,7 @@ import {
   FaPython, 
   FaJava,
   FaNodeJs,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 import { 
   SiMysql, 
   SiMongodb, 
@@ -17,7 +17,7 @@ import {
   SiExpress,
   SiDjango,
   SiGithub
-} from 'react-icons/si';
+} from "react-icons/si";
 import { DiSqllite } from "react-icons/di";
 
 const Skills = () => {
