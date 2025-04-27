@@ -23,7 +23,7 @@ const Navbar = () => {
           <li><Link href="#skills" className="hover:text-red-400">Skills</Link></li>
           <li><Link href="#experience" className="hover:text-red-400">Experience</Link></li>
           <li><Link href="#projects" className="hover:text-red-400">Projects</Link></li>
-          <li><Link href="#testimonials" className="hover:text-red-400">Testimonials</Link></li>
+          <li><Link href="#certificates" className="hover:text-red-400">Certificates</Link></li>
           <li><Link href="#contact" className="hover:text-red-400">Contact</Link></li>
         </ul>
         <div className="md:hidden flex items-center">
@@ -39,7 +39,7 @@ const Navbar = () => {
           <li><a href="#skills" className="hover:text-red-400" onClick={toggleMenu}>Skills</a></li>
           <li><a href="#experience" className="hover:text-red-400" onClick={toggleMenu}>Experience</a></li>
           <li><a href="#projects" className="hover:text-red-400" onClick={toggleMenu}>Projects</a></li>
-          <li><a href="#testimonials" className="hover:text-red-400" onClick={toggleMenu}>Testimonials</a></li>
+          <li><a href="#certificates" className="hover:text-red-400" onClick={toggleMenu}>Certificates</a></li>
           <li><a href="#contact" className="hover:text-red-400" onClick={toggleMenu}>Contact</a></li>
         </ul>
       )}

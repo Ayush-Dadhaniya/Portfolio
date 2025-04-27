@@ -4,6 +4,9 @@ import Education from '@/components/Education/page';
 import Skills from '@/components/Skills/page';
 import Experience from '@/components/Experience/page';
 import Projects from '@/components/Projects/page';
+import Certificates from '@/components/Certificates/page';
+import Contact from '@/components/Contact/page';
+import Footer from '@/components/Footer/page';
 export default function Home() {
   return (
     <div className="bg-black h-fit">
@@ -22,6 +25,15 @@ export default function Home() {
       </section>
       <section id="projects" className="h-full scroll-mt-20 scroll-smooth">
         <Projects/>
+      </section>
+      <section id="certificates" className="h-full scroll-mt-20 scroll-smooth">
+        <Certificates/>
+      </section>
+      <section id="contact" className="h-full scroll-mt-20 scroll-smooth">
+        <Contact/>
+      </section>
+      <section className="h-full scroll-mt-20 scroll-smooth">
+        <Footer/>
       </section>
     </div>
   );

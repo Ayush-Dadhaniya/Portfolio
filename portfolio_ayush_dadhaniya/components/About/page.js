@@ -1,5 +1,4 @@
 import React from "react"
-
 const About = () => {
     return (
         <section className="mt-7 flex justify-between bg-gradient-to-br font-serif flex-wrap from-[#000080] via-black to-red-400 h-auto mx-5 p-4 text-white flex-row gap-10 relative overflow-hidden">
