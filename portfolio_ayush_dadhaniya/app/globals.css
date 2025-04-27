@@ -4,6 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* Add this CSS to your global styles or within a CSS module */
+
+.skill-card {
+  @apply bg-gray-800 p-6 h-30 w-30 duration-900 items-center justify-center flex flex-col rounded-lg shadow-md transition-transform transform hover:scale-105 hover:border-2 hover:border-pink-500;
+}
 
 @theme inline {
   --color-background: var(--background);
