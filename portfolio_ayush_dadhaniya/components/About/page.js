@@ -2,7 +2,7 @@ import React from "react"
 
 const About = () => {
     return (
-        <div className="mt-7 flex justify-between bg-gradient-to-br font-serif flex-wrap from-[#000080] via-black to-red-400 h-auto mx-5 p-4 text-white flex-row gap-10 relative overflow-hidden">
+        <section className="mt-7 flex justify-between bg-gradient-to-br font-serif flex-wrap from-[#000080] via-black to-red-400 h-auto mx-5 p-4 text-white flex-row gap-10 relative overflow-hidden">
             <div className="flex pt-10 pl-5 flex-col font-stretch-extra-expanded flex-wrap w-full md:w-1/2">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">Hey! I am</h1>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Ayush Dadhaniya</h1>
@@ -46,7 +46,7 @@ const About = () => {
                     }
                 `}
             </style>
-        </div>
+        </section>
     )
 }
 

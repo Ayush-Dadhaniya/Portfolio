@@ -2,7 +2,7 @@ import React from 'react';
 
 const Education = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col items-center p-10">
+    <section className="bg-black text-white flex-wrap flex flex-col items-center p-10">
       
       <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10">
         My <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Education</span>
@@ -40,7 +40,7 @@ const Education = () => {
 
       </div>
 
-    </div>
+    </section>
   )
 }
 
