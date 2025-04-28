@@ -1,10 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 const certificateData = [
   {
     title: "C for Everyone: programming Fundamentals",
@@ -89,68 +91,103 @@ const certificateData = [
 ];
 
 const Certificates = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const [swiperReady, setSwiperReady] = useState(false);
+
+  useEffect(() => {
+    setSwiperReady(true);
+  }, []);
+
   return (
-    <section className="bg-black text-white flex flex-col items-center p-10 min-h-screen">
+    <section className="bg-black text-white flex flex-col items-center p-10 min-h-screen relative">
       <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">
         My <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Certificates</span>
       </div>
 
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        autoplay={{ delay: 2500, disableOnInteraction: false }} // Autoplay every 1 second
-        loop={true} // Loop the carousel
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="w-full max-w-6xl"
-      >
-        {certificateData.map((certificate, index) => (
-          <SwiperSlide key={index}>
-            <div
-              className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col p-5"
-              style={{
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
-                height: '450px', // Set fixed height for each card
-              }}
-            >
+      {/* Navigation Buttons */}
+      <div className="absolute flex justify-center items-center top-1/2 left-5 z-10 transform -translate-y-1/2">
+        <div ref={prevRef}>
+          <button className="text-3xl text-white bg-pink-500 hover:bg-pink-700 rounded-full p-3 shadow-lg">
+            &#8592;
+          </button>
+        </div>
+      </div>
+
+      <div className="absolute flex justify-center items-center top-1/2 right-5 z-10 transform -translate-y-1/2">
+        <div ref={nextRef}>
+          <button className="text-3xl text-white bg-pink-500 hover:bg-pink-700 rounded-full p-3 shadow-lg">
+            &#8594;
+          </button>
+        </div>
+      </div>
+
+      {swiperReady && (
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            if (typeof swiper.params.navigation !== 'boolean') {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }
+          }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="w-full max-w-6xl"
+        >
+          {certificateData.map((certificate, index) => (
+            <SwiperSlide key={index}>
               <div
-                className="relative flex justify-center items-center bg-indigo-500/20 h-48 mb-5 rounded-xl overflow-hidden"
+                className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col p-5"
                 style={{
-                  transition: 'transform 0.3s ease',
-                  width: '100%',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
+                  height: '450px',
                 }}
               >
-                <Image
-                  src={certificate.image}
-                  alt="Certificate"
-                  width={500}  // Set width according to your design
-                  height={200} // Set a consistent height for images
-                  style={{ objectFit: 'contain' }} // Ensure images maintain aspect ratio
-                />
-              </div>
-              <div className="flex flex-col flex-grow">
-                <h3 className="text-xl font-bold mb-2">{certificate.title}</h3>
-                <div className="text-blue-400 text-sm font-semibold mb-3">{certificate.issuer}</div>
-                <p className="text-sm text-gray-400 flex-grow">{certificate.description}</p>
-                <div className="flex flex-wrap items-center justify-between mt-5">
-                  <div className="text-xs text-gray-400">{certificate.date}</div>
-                  <a
-                    href={certificate.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-pink-500 text-sm font-semibold hover:underline"
-                  >
-                    View → 
-                  </a>
+                <div
+                  className="relative flex justify-center items-center bg-indigo-500/20 h-48 mb-5 rounded-xl overflow-hidden"
+                  style={{ transition: 'transform 0.3s ease', width: '100%' }}
+                >
+                  <Image
+                    src={certificate.image}
+                    alt="Certificate"
+                    width={500}
+                    height={200}
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <div className="flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-2">{certificate.title}</h3>
+                  <div className="text-blue-400 text-sm font-semibold mb-3">{certificate.issuer}</div>
+                  <p className="text-sm text-gray-400 flex-grow">{certificate.description}</p>
+                  <div className="flex flex-wrap items-center justify-between mt-5">
+                    <div className="text-xs text-gray-400">{certificate.date}</div>
+                    <a
+                      href={certificate.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-500 text-sm font-semibold hover:underline"
+                    >
+                      View →
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </section>
   );
 };
