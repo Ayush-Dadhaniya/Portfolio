@@ -5,7 +5,7 @@
   --foreground: #171717;
 }
 /* Add this CSS to your global styles or within a CSS module */
-body {
+html,body {
   overflow-x: hidden;
 }
 

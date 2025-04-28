@@ -9,7 +9,7 @@ import Contact from '@/components/Contact/page';
 import Footer from '@/components/Footer/page';
 export default function Home() {
   return (
-    <div className="bg-black h-fit">
+    <div className="bg-black overflow-x-hidden h-fit">
       <Navbar />
       <section id="about" className="h-full scroll-smooth scroll-mt-20">
         <About />
