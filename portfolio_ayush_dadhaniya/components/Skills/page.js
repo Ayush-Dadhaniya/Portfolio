@@ -31,7 +31,7 @@ const Skills = () => {
 
         {/* Languages & Frameworks */}
         <h3 className="col-span-full text-3xl font-bold mb-6">Languages & Frameworks</h3>
-        <div className="flex flex-wrap gap-6 items-center mb-20">
+        <div className="flex flex-wrap gap-6 items-center justify-center sm:justify-start mb-20">
           <div className="skill-card">
             <SiCplusplus className="text-pink-500 mb-4 text-4xl" />
             <h4 className="text-xl font-semibold">C/C++</h4>
@@ -68,7 +68,7 @@ const Skills = () => {
 
         {/* Databases & Query Languages */}
         <h3 className="col-span-full text-3xl font-bold mb-6">Databases & Query Languages</h3>
-        <div className="flex flex-wrap gap-6 mb-20">
+        <div className="flex flex-wrap gap-6 justify-center sm:justify-start mb-20">
           <div className="skill-card">
             <SiPostgresql className="text-pink-500 mb-4 text-4xl" />
             <h4 className="text-xl font-semibold">PostgreSQL</h4>
@@ -89,7 +89,7 @@ const Skills = () => {
 
         {/* Tools & Others */}
         <h3 className="col-span-full text-3xl font-bold mb-6">Tools & Others</h3>
-        <div className="flex flex-wrap gap-6">
+        <div className="flex flex-wrap gap-6 justify-center sm:justify-start">
           <div className="skill-card">
             <FaGit className="text-pink-500 mb-4 text-4xl" />
             <h4 className="text-xl font-semibold">Git</h4>
