@@ -12,7 +12,7 @@ const Experience = () => {
         {/* <div className="absolute left-1/2 transform -translate-x-1/2 bg-gradient-to-b from-pink-500 to-indigo-500 w-1 h-full top-0 z-0"></div> */}
 
         {/* Experience Card */}
-        <div className="flex flex-col sm:flex-row justify-center sm:items-start mb-20 relative z-10">
+        <div className="flex flex-col sm:flex-row justify-center sm:items-start relative z-10">
           <div className="bg-gradient-to-r from-pink-500 to-indigo-500 p-8 rounded-lg shadow-lg sm:w-2/3 transform hover:scale-105 transition-transform duration-500 ease-in-out">
             <h3 className="text-3xl sm:text-4xl font-serif font-bold mb-4">System Engineer</h3>
             <h3 className="text-2xl sm:text-3xl text-black font-sans font-bold mb-1">CEREBULB</h3>

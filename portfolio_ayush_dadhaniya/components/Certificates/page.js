@@ -156,7 +156,7 @@ const Certificates = () => {
                 }}
               >
                 <div
-                  className="relative flex justify-center items-center bg-indigo-500/20 h-48 mb-5 rounded-xl overflow-hidden"
+                  className="relative flex justify-center items-center bg-indigo-500/20 h-48 rounded-xl overflow-hidden"
                   style={{ transition: 'transform 0.3s ease', width: '100%' }}
                 >
                   <Image
