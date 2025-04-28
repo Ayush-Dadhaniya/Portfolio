@@ -8,7 +8,7 @@ const About = () => {
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg">
                     <span className="text-bold text-3xl">"</span>I"m an IT student passionate about building software, crafting machine learning solutions, and designing for the web. I"ve contributed to real-world projects for one of India"s leading power generation and distribution companies. Now, I"m excited to bring my skills, creativity, and energy into a software development role — and keep leveling up along the way.<span className="text-bold text-3xl">"</span>
                 </p>
-                <button className="bg-pink-500 h-10 w-30 rounded-3xl font-bold font-[Poppins] duration-500 ease-in-out hover:scale-105 hover:shadow-[0_20px_60px_-10px_rgba(255,0,128,0.7),0_10px_40px_-15px_rgba(128,0,255,0.6),0_5px_30px_-20px_rgba(255,0,0,0.5)] text-white mt-5 md:mt-10">Let"s connect</button>
+                {/* <button className="bg-pink-500 h-10 w-30 rounded-3xl font-bold font-[Poppins] duration-500 ease-in-out hover:scale-105 hover:shadow-[0_20px_60px_-10px_rgba(255,0,128,0.7),0_10px_40px_-15px_rgba(128,0,255,0.6),0_5px_30px_-20px_rgba(255,0,0,0.5)] text-white mt-5 md:mt-10">Let"s connect</button> */}
             </div>
             <div className="flex m-5 gap-3 relative">
                 <img className="w-full max-w-[400px] rounded-[30px] border-[4px] border-white/10 duration-900 ease-in-out hover:scale-105 hover:border-white/30 hover:shadow-[0_25px_70px_-10px_rgba(255,0,128,0.8),0_15px_50px_-15px_rgba(128,0,255,0.7),0_8px_40px_-20px_rgba(255,0,0,0.6)]" src="/image.png" alt="Ayush Dadhaniya" />
