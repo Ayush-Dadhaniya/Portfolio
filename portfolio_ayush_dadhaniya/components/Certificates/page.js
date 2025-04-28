@@ -107,17 +107,17 @@ const Certificates = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="absolute flex justify-center items-center top-1/2 left-2 z-10 transform -translate-y-1/2 sm:left-4 md:left-10">
-        <div ref={prevRef}>
-        <button className="text-2xl text-white bg-pink-500 hover:bg-pink-700 rounded-full p-2 sm:p-3 shadow-lg sm:text-3xl">
+      <div className="absolute flex justify-center items-center top-1/2 left-2 z-20 transform -translate-y-1/2 sm:left-4 md:left-10">
+        <div ref={prevRef} className="block">
+          <button className="text-2xl text-white bg-pink-500 hover:bg-pink-700 rounded-full p-2 sm:p-3 shadow-lg">
             &#8592;
           </button>
         </div>
       </div>
 
-      <div className="absolute flex justify-center items-center top-1/2 left-2 z-10 transform -translate-y-1/2 sm:left-4 md:left-10">
-        <div ref={nextRef}>
-        <button className="text-2xl text-white bg-pink-500 hover:bg-pink-700 rounded-full p-2 sm:p-3 shadow-lg sm:text-3xl">
+      <div className="absolute flex justify-center items-center top-1/2 right-2 z-20 transform -translate-y-1/2 sm:right-4 md:right-10">
+        <div ref={nextRef} className="block">
+          <button className="text-2xl text-white bg-pink-500 hover:bg-pink-700 rounded-full p-2 sm:p-3 shadow-lg">
             &#8594;
           </button>
         </div>
