@@ -5,6 +5,9 @@
   --foreground: #171717;
 }
 /* Add this CSS to your global styles or within a CSS module */
+body {
+  overflow-x: hidden;
+}
 
 .skill-card {
     background-color: #2d3748; /* bg-gray-800 */
