@@ -9,30 +9,30 @@ import Contact from '@/components/Contact/page';
 import Footer from '@/components/Footer/page';
 export default function Home() {
   return (
-    <div className="bg-black overflow-x-hidden h-fit">
+    <div className="bg-black h-fit">
       <Navbar />
-      <section id="about" className="h-full scroll-smooth scroll-mt-20">
+      <section id="about" className="h-full  overflow-x-hidden scroll-smooth scroll-mt-20">
         <About />
       </section>
-      <section id="education" className="h-full scroll-smooth scroll-mt-20">
+      <section id="education" className="h-full  overflow-x-hidden scroll-smooth scroll-mt-20">
         <Education />
       </section>
-      <section id="skills" className="h-full scroll-mt-20 scroll-smooth">
+      <section id="skills" className="h-full  overflow-x-hidden scroll-mt-20 scroll-smooth">
         <Skills />
       </section>
-      <section id="experience" className="h-full scroll-mt-20 scroll-smooth">
+      <section id="experience" className="h-full overflow-x-hidden scroll-mt-20 scroll-smooth">
         <Experience />
       </section>
-      <section id="projects" className="h-full scroll-mt-20 scroll-smooth">
+      <section id="projects" className="h-full scroll-mt-20  overflow-x-hidden scroll-smooth">
         <Projects/>
       </section>
-      <section id="certificates" className="h-full scroll-mt-20 scroll-smooth">
+      <section id="certificates" className="h-full scroll-mt-20  overflow-x-hidden scroll-smooth">
         <Certificates/>
       </section>
-      <section id="contact" className="h-full scroll-mt-20 scroll-smooth">
+      <section id="contact" className="h-full scroll-mt-20  overflow-x-hidden scroll-smooth">
         <Contact/>
       </section>
-      <section className="h-full scroll-mt-20 scroll-smooth">
+      <section className="h-full scroll-mt-20  overflow-x-hidden scroll-smooth">
         <Footer/>
       </section>
     </div>
