@@ -1,34 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import './globals.css';
+import Navbar from '@/components/Navbar/page';
 
 export const metadata = {
-  title: "Ayush Dadhaniya",
-  description: "Portfolio of Ayush Dadhaniya",
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
-  icons: {
-    icon: "/icon.png",
-  },
+  title: 'Ayush Dadhaniya Portfolio',
+  description: 'A modern, animated, Gen-Z portfolio',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-        {children}
-        <Analytics/>
+    <html lang="en" className="overflow-x-hidden w-full">
+      <body className="bg-black w-full min-h-screen">
+        <Navbar />
+        <main className="w-full px-0 md:px-0 py-0 min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -1,50 +1,110 @@
 "use client";
+import Link from 'next/link';
+import { useState } from 'react';
+import { Menu, X, Github, Linkedin, Instagram } from 'lucide-react';
 
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Education', path: '/education' },
+  { name: 'Experience', path: '/experience' },
+  { name: 'Projects', path: '/projects' },
+  { name: 'Certificates', path: '/certificates' },
+  { name: 'Contact', path: '/contact' },
+];
 
-const Navbar = () => {
+const socialLinks = [
+  { name: 'GitHub', icon: Github, url: 'https://github.com/Ayush-Dadhaniya' },
+  { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/ayushdadhaniya' },
+  { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/ayushdadhaniya' },
+];
+
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
-    <div className="sticky top-0 h-fit z-50 bg-black text-white shadow-lg px-4 py-4">
-      <nav className="bg-black text-white flex justify-between items-center">
-        <div className="text-3xl md:text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Ayush Dadhaniya.
-        </div>
-        <ul className="hidden md:flex space-x-6">
-          <li><Link href="#about" className="hover:text-red-400 animate-spin">About</Link></li>
-          <li><Link href="#education" className="hover:text-red-400">Education</Link></li>
-          <li><Link href="#skills" className="hover:text-red-400">Skills</Link></li>
-          <li><Link href="#experience" className="hover:text-red-400">Experience</Link></li>
-          <li><Link href="#projects" className="hover:text-red-400">Projects</Link></li>
-          <li><Link href="#certificates" className="hover:text-red-400">Certificates</Link></li>
-          <li><Link href="#contact" className="hover:text-red-400">Contact</Link></li>
-        </ul>
-        <div className="md:hidden flex items-center">
-          <button onClick={toggleMenu}>
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+    <nav className="sticky top-0 z-50 w-full bg-gradient-to-r from-purple-900 via-pink-900 to-cyan-900 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Profile */}
+          <div className="hidden sm:block">
+            <span className="text-lg font-bold text-white">Ayush Dadhaniya</span>
+            <div className="text-xs text-cyan-300">Full-Stack Developer</div>
+          </div>
+
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex gap-6">
+            {navLinks.map((link) => (
+              <Link key={link.name} href={link.path} className="text-white hover:text-cyan-300 font-medium transition-colors">
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Social Icons */}
+          <div className="hidden md:flex gap-3">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
+                  aria-label={social.name}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Mobile Hamburger */}
+          <button
+            className="md:hidden p-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {menuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
-      </nav>
-      {menuOpen && (
-        <ul className="md:hidden flex flex-col items-center text-white bg-black space-y-4 py-4">
-          <li><a href="#about" className="hover:text-red-400" onClick={toggleMenu}>About</a></li>
-          <li><a href="#education" className="hover:text-red-400" onClick={toggleMenu}>Education</a></li>
-          <li><a href="#skills" className="hover:text-red-400" onClick={toggleMenu}>Skills</a></li>
-          <li><a href="#experience" className="hover:text-red-400" onClick={toggleMenu}>Experience</a></li>
-          <li><a href="#projects" className="hover:text-red-400" onClick={toggleMenu}>Projects</a></li>
-          <li><a href="#certificates" className="hover:text-red-400" onClick={toggleMenu}>Certificates</a></li>
-          <li><a href="#contact" className="hover:text-red-400" onClick={toggleMenu}>Contact</a></li>
-        </ul>
-      )}
-    </div>
-  );
-};
+      </div>
 
-export default Navbar;
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-gradient-to-b from-purple-900 via-pink-900 to-cyan-900 px-4 pb-4 pt-2 shadow-lg animate-fade-in-down">
+          <div className="flex flex-col gap-3 mb-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.path}
+                className="text-white hover:text-cyan-300 font-medium text-lg transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+          <div className="flex gap-3 justify-center">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
+                  aria-label={social.name}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+} 
