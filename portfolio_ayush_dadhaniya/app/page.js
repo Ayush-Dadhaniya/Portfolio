@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-purple-900 via-black to-cyan-900 overflow-x-hidden">
-      <div className="w-full h-full px-4 md:px-8 py-6 flex flex-col items-center justify-center">
+    <div className="w-full h-screen bg-gradient-to-br from-purple-900 via-black to-cyan-900 flex items-center justify-center">
+      <div className="w-full h-full flex flex-col items-center justify-center px-4 md:px-8">
         {/* Profile Section - Horizontal Layout */}
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-6 md:mb-8 max-w-4xl">
           {/* Large Circular Photo */}
