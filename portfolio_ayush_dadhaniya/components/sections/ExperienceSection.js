@@ -1,5 +1,6 @@
 import React from "react"
 import { GlitchText } from "@/components/glitch-text"
+import SpotlightCard from '../ui/SpotlightCard2';
 
 const experiences = [
   {
@@ -27,7 +28,7 @@ export default function ExperienceSection() {
         </div>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={exp.title} className="bg-white/10 rounded-xl p-6">
+            <SpotlightCard key={exp.title} className="bg-white/10 rounded-xl p-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-white">{exp.title}</h3>
@@ -36,7 +37,7 @@ export default function ExperienceSection() {
                 <span className="border border-pink-400 text-pink-400 w-fit rounded px-2 py-1 text-xs font-semibold">{exp.period}</span>
               </div>
               <p className="text-gray-300">{exp.description}</p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

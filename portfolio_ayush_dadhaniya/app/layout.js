@@ -1,4 +1,5 @@
 import './globals.css';
+import SplashCursor from '../components/SplashCursor';
 
 export const metadata = {
   title: 'Ayush Dadhaniya Portfolio',
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden w-full">
       <body>
+        <SplashCursor />
         <main className="w-full px-0 md:px-0 py-0 min-h-screen flex flex-col items-center justify-start">
           {children}
         </main>

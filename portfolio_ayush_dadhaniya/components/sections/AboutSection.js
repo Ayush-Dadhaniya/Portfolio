@@ -22,7 +22,7 @@ export default function AboutSection() {
           </div>
           <div className="space-y-4">
             <SpotlightCard className="bg-white/10 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-white mb-2" spotlightColor="rgba(0, 229, 255, 0.2)">Frontend Development</h4>
+              <h4 className="text-lg font-semibold text-white mb-2">Frontend Development</h4>
               <p className="text-gray-300">Creating responsive, interactive user interfaces with modern frameworks</p>
             </SpotlightCard>
             <SpotlightCard className="bg-white/10 rounded-xl p-6" spotlightColor="rgba(0, 229, 255, 0.2)">
@@ -30,7 +30,7 @@ export default function AboutSection() {
               <p className="text-gray-300">Building scalable APIs and server-side applications</p>
             </SpotlightCard>
             <SpotlightCard className="bg-white/10 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-white mb-2" spotlightColor="rgba(0, 229, 255, 0.2)">AI & Data</h4>
+              <h4 className="text-lg font-semibold text-white mb-2">AI & Data</h4>
               <p className="text-gray-300">Experimenting with machine learning and data-driven solutions</p>
             </SpotlightCard>
           </div>
