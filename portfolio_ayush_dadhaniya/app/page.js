@@ -58,7 +58,7 @@ export default function Portfolio() {
   // Remove scrollToSection function
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-x-hidden bg-black">
       {/* Background Effects */}
       <ParticleField />
       <FloatingElements />
@@ -147,7 +147,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content (shifted for sidebar on desktop) */}
-      <div className="md:ml-64">
+      <div className="md:ml-64 overflow-x-hidden">
         <AnimatePresence mode="wait" initial={false}>
           {activeSection === "home" && (
             <motion.div

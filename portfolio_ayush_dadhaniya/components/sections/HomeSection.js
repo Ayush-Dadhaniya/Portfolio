@@ -4,8 +4,8 @@ import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export default function HomeSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-16 relative z-10">
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-8">
+    <section className="min-h-screen flex items-center justify-center px-4 pt-16 relative z-10 overflow-x-hidden">
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-8 w-full">
         {/* Original Rectangle Photo on Left */}
         <div className="relative w-40 h-56 md:w-56 md:h-72 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-lg flex items-center justify-center">
           <img
@@ -15,11 +15,13 @@ export default function HomeSection() {
           />
         </div>
         {/* Data on Right */}
-        <div className="flex-1 flex flex-col items-center md:items-start justify-center">
-          <div>
-            <ShinyText text="Full-Stack Developer" disabled={false} speed={3} className="font-bold "/>
-            <p className="text-xl italic mt-2 md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto md:mx-0">
-              <b className="text-3xl">" </b>IT graduate with experience in software development, machine learning, and web development. I love building real-world projects and creating digital experiences that blend creativity with code.<b className="text-3xl"> "</b>
+        <div className="flex-1 flex flex-col items-center md:items-start justify-center w-full">
+          <div className="w-full">
+            <div className="overflow-hidden">
+              <ShinyText text="Full-Stack Developer" disabled={false} speed={3} className="font-bold text-2xl md:text-3xl lg:text-4xl"/>
+            </div>
+            <p className="text-lg italic mt-2 md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto md:mx-0">
+              <b className="text-2xl md:text-3xl">" </b>IT graduate with experience in software development, machine learning, and web development. I love building real-world projects and creating digital experiences that blend creativity with code.<b className="text-2xl md:text-3xl"> "</b>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center md:items-start">
               <a
@@ -31,7 +33,7 @@ export default function HomeSection() {
                 <Download className="w-5 h-5 group-hover:animate-bounce" />
                 Download Resume
               </a>
-              <div className="flex space-x-3">
+              <div className="flex flex-wrap justify-center gap-3">
                 <a
                   href="https://github.com/Ayush-Dadhaniya"
                   target="_blank"

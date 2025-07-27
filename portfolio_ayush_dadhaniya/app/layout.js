@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="overflow-x-hidden w-full">
-      <body>
+    <html lang="en" className="overflow-x-hidden">
+      <body className="overflow-x-hidden bg-black">
         <SplashCursor />
-        <main className="w-full px-0 md:px-0 py-0 min-h-screen flex flex-col items-center justify-start">
+        <main className="w-full overflow-x-hidden">
           {children}
         </main>
       </body>
