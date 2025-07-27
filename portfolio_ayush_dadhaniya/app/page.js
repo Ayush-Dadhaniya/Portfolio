@@ -58,7 +58,7 @@ export default function Portfolio() {
   // Remove scrollToSection function
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden bg-black">
+    <div className="min-h-screen relative overflow-x-hidden bg-gradient-to-br from-black via-purple-900/20 to-pink-900/20">
       {/* Background Effects */}
       <ParticleField />
       <FloatingElements />
