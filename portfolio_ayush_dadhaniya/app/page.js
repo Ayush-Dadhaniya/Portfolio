@@ -58,7 +58,7 @@ export default function Portfolio() {
   // Remove scrollToSection function
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden bg-gradient-to-br from-pink via-purple-900/20 to-pink-900/20">
+    <div className="min-h-screen relative overflow-x-hidden bg-gradient-to-br from-pink via-purple-900/20 to-pink-900/20 w-full max-w-full">
       {/* Background Effects */}
       <ParticleField />
       <FloatingElements />
@@ -106,7 +106,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10 md:hidden">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10 md:hidden w-full">
         <div className="flex items-center justify-between h-16 px-4">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="text-2xl font-bold">
             <GlitchText
@@ -147,7 +147,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content (shifted for sidebar on desktop) */}
-      <div className="md:ml-64 overflow-x-hidden">
+      <div className="md:ml-64 overflow-x-hidden w-full max-w-full">
         <AnimatePresence mode="wait" initial={false}>
           {activeSection === "home" && (
             <motion.div
@@ -156,6 +156,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <HomeSection />
             </motion.div>
@@ -167,6 +168,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <AboutSection />
             </motion.div>
@@ -178,6 +180,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <ProjectsSection />
             </motion.div>
@@ -189,6 +192,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <ExperienceSection />
             </motion.div>
@@ -200,6 +204,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <EducationSection />
             </motion.div>
@@ -211,6 +216,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <CertificatesSection />
             </motion.div>
@@ -222,6 +228,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="w-full max-w-full overflow-x-hidden"
             >
               <ContactSection />
             </motion.div>
