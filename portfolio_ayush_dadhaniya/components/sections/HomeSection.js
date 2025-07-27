@@ -4,7 +4,7 @@ import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export default function HomeSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-16 relative z-10 overflow-x-hidden bg-black">
+    <section className="min-h-screen flex items-center justify-center px-4 pt-16 relative z-10 overflow-x-hidden bg-gradient-to-br from-black via-purple-900/20 to-pink-900/20">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-8 w-full">
         {/* Original Rectangle Photo on Left */}
         <div className="relative w-40 h-56 md:w-56 md:h-72 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-lg flex items-center justify-center">
