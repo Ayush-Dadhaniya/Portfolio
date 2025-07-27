@@ -21,7 +21,7 @@ export default function HomeSection() {
               <ShinyText text="Full-Stack Developer" disabled={false} speed={3} />
             </div>
             <p className="text-sm sm:text-base md:text-lg italic mt-2 md:text-2xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto md:mx-0 px-2 sm:px-0">
-              <b className="text-lg sm:text-xl md:text-2xl lg:text-3xl">" </b>IT graduate with experience in software development, machine learning, and web development. I love building real-world projects and creating digital experiences that blend creativity with code.<b className="text-lg sm:text-xl md:text-2xl lg:text-3xl"> "</b>
+              <b className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">" </b>IT graduate with experience in software development, machine learning, and web development. I love building real-world projects and creating digital experiences that blend creativity with code.<b className="text-lg sm:text-xl md:text-2xl lg:text-3xl"> "</b>
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start items-center md:items-start px-2 sm:px-0">
               <a
