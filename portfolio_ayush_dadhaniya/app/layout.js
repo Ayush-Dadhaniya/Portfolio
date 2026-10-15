@@ -1,20 +1,20 @@
-import './globals.css';
-import SplashCursor from '../components/SplashCursor';
-
+import "./globals.css";
 export const metadata = {
-  title: 'Ayush Dadhaniya Portfolio',
-  description: 'A modern, animated, Gen-Z portfolio',
+  title: "Ayush Dadhaniya — Software Developer",
+  description:
+    "Melbourne-based software developer working across full-stack applications, cybersecurity, and IoT systems. Explore projects, experience, and get in touch.",
+  openGraph: {
+    title: "Ayush Dadhaniya — Software Developer",
+    description: "Thoughtful code. Useful products. A security mindset.",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
+  icons: { icon: "/favicon.svg" },
 };
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="overflow-x-hidden">
-      <body className="overflow-x-hidden bg-black">
-        <SplashCursor />
-        <main className="w-full overflow-x-hidden">
-          {children}
-        </main>
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
